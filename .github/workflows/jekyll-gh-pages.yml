@@ -3,4 +3,7 @@ theme: jekyll-theme-cayman
 title: Dounia Toubal
 description: Data Analyst & AI Engineer · Turning Raw Data into Real Decisions
 
+baseurl: "/portfolio" 
+url: "https://dounia4112.github.io"
+
 show_downloads: false
