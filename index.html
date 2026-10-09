@@ -146,7 +146,7 @@
     .project:hover { transform: translateY(-5px); box-shadow: 0 24px 48px -24px rgba(23,36,31,.35); border-color: rgba(23,36,31,.4); }
     .shot { position: relative; aspect-ratio: 16/10; padding: 14px 14px 0; border-bottom: 1px solid var(--line); }
     .shot-frame { position: relative; width: 100%; height: 100%; border-radius: 4px 4px 0 0; overflow: hidden; background: var(--card); box-shadow: 0 -1px 0 rgba(23,36,31,.1), 0 10px 30px -12px rgba(23,36,31,.35); display: flex; flex-direction: column; }
-    .shot-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .shot-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
     .shot-bar { display: flex; gap: 5px; padding: 9px 10px; border-bottom: 1px solid var(--line); }
     .shot-bar i { width: 7px; height: 7px; border-radius: 50%; background: rgba(23,36,31,.18); }
     .shot-body { flex: 1; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(rgba(23,36,31,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(23,36,31,.05) 1px, transparent 1px); background-size: 22px 22px; }
@@ -298,7 +298,7 @@
         <div class="section-head" data-reveal>
           <div>
             <span class="eyebrow">02 / Selected work</span>
-            <h2 class="display">Eight projects,<br><em>three disciplines.</em></h2>
+            <h2 class="display">Nine projects,<br><em>three disciplines.</em></h2>
           </div>
           <p>Client systems from Wissal and SIG alongside open-source builds. Each card lists the tools that did most of the work.</p>
         </div>
@@ -371,6 +371,7 @@
       { f: 'ai', title: 'Multi-Agent Research Assistant', kind: 'Open source · Agents', desc: 'Ask a question and five LangGraph agents (planner, searcher, synthesizer, writer, grader) research the live web and return a self-reviewed report in under a minute.', tools: ['LangGraph', 'LangChain', 'Groq', 'Tavily', 'FastAPI', 'Streamlit'], live: 'https://multi-agent-research-assistant-bnmn7379dpzcaq8fdi5d3q.streamlit.app/', github: GH + '/Multi-Agent-Research-Assistant' },
       { f: 'ai', title: 'Pharmasight', kind: 'Research · RAG', desc: 'Regulatory Q&A for pharmaceutical compliance: a knowledge graph of regulatory relationships, fine-tuned language models and RAG retrieval for precise answers.', tools: ['LangChain', 'Hugging Face', 'RAG', 'Knowledge Graphs'], github: GH },
       { f: 'ai', title: 'Etaysir Wibotmaker', kind: 'Wissal Systèmes · Platform', desc: 'A chatbot-builder API that lets non-technical teams create context-aware LLM agents on demand, backed by vector search.', tools: ['FastAPI', 'Weaviate', 'LLMs', 'Python'], github: GH },
+      { f: 'da', title: 'Sales Intelligence System', kind: 'Open source · BI', desc: 'A messy 23-sheet Excel export cleaned into a DuckDB star schema and turned into a three-page dashboard: revenue against plan, customer concentration, and how long each sale takes to become cash.', tools: ['Python', 'DuckDB', 'Pandas', 'Parquet', 'Power BI', 'JavaScript'], live: 'https://dounia4112.github.io/Sales-Intelligent-System/dashboard/html/', github: GH + '/Sales-Intelligent-System', img: 'assets/projects/sales-intelligence.webp' },
       { f: 'da', title: 'SQL Data Warehouse', kind: 'Open source · Warehousing', desc: 'A warehouse built from scratch on the Medallion pattern (bronze, silver, gold) with ETL pipelines, a star schema and KPI views ready for BI.', tools: ['PostgreSQL', 'ETL', 'Star Schema', 'Power BI'], github: GH },
       { f: 'da', title: 'EkiClik Dashboard', kind: 'Wissal Systèmes · BI', desc: 'Analytics for a bank-partnered fintech: audited Power BI KPIs, demand forecasting and an Airflow pipeline that keeps every report fresh.', tools: ['Power BI', 'Airflow', 'SQL', 'Pandas'], github: GH },
       { f: 'ds', title: 'Retail Shelf Recognition', kind: 'SIG Services · Vision', desc: 'YOLOv12 fine-tuned on GCP to detect shelves and recognise individual products from in-store photos.', tools: ['YOLOv12', 'GCP', 'OpenCV', 'Python'], github: GH },
@@ -382,7 +383,7 @@
       { key: 'ai', blurb: 'Orchestrating LLMs into systems that hold up in production.', items: [
         ['LangGraph', 'Research Assistant'], ['LangChain', 'Pharmasight · Assistant'], ['Hugging Face', 'Pharmasight'], ['RAG', 'Pharmasight'], ['Weaviate · Chroma', 'Wibotmaker'], ['FastAPI', 'Wibotmaker · OCR-WI'], ['Groq · Tavily', 'Research Assistant'] ] },
       { key: 'da', blurb: 'From ingestion to the chart a stakeholder actually reads.', items: [
-        ['SQL', 'Warehouse · EkiClik'], ['Power BI', 'EkiClik Dashboard'], ['Tableau', 'Reporting'], ['PostgreSQL · SQL Server', 'Warehouse'], ['Apache Airflow', 'EkiClik pipeline'], ['n8n', 'Automation'], ['Pandas · Plotly', 'Analysis'] ] },
+        ['SQL', 'Warehouse · EkiClik'], ['Power BI', 'EkiClik · Sales Intelligence'], ['DuckDB · Parquet', 'Sales Intelligence'], ['Tableau', 'Reporting'], ['PostgreSQL · SQL Server', 'Warehouse'], ['Apache Airflow', 'EkiClik pipeline'], ['n8n', 'Automation'], ['Pandas · Plotly', 'Analysis'] ] },
       { key: 'ds', blurb: 'Training, evaluating and deploying models on real data.', items: [
         ['YOLOv12', 'Shelf Recognition'], ['OpenCV', 'OCR-WI · Shelves'], ['OCR', 'OCR-WI'], ['Scikit-learn', 'Recommender'], ['TensorFlow', 'Deep learning'], ['NumPy · Matplotlib', 'Modelling'] ] },
     ];
